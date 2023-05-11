@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>invoice</title>
+</head>
+<body>
+<form action="/invoice_pay/" method="post">
+    {% csrf_token %}
+    <h1>invoice</h1>
+    orderid:
+    <input type="text" name="id" value="{{ id }}">
+    AID:
+    <input type="text" name="AID" value="{{ AID }}">
+    balance: 
+    {{ request.session.balance }}
+    totalAmount:
+    <input type="text" name="y" value="{{ y }}">=
+    new_balance:
+    <span>{{ result }}</span>
+    airline:
+    <input type="text" name="airline" value="{{ airline }}">
+    <div><input type="submit" value="pay"></div>
+
+</form>
+</body>
+</html>
