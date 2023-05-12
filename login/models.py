@@ -36,6 +36,7 @@ class invoice_detail(models.Model):
     AID=models.IntegerField(default=1)
     totalAmount=models.IntegerField(default=0)
     airline=models.CharField(max_length=50)
+    key=models.CharField(max_length=100, default='')
 
 
 class ConfirmString(models.Model):
